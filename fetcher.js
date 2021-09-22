@@ -21,24 +21,6 @@
 const usableargs = process.argv.slice(2);
 const fs = require('fs');
 
-const content = 'Some content!';
-
-
-
-// if !length > 0
-
-// fs.writeFile(
-//   './index.html',
-//   content,
-//   err => {
-//     if (err) {
-//       console.error(err);
-//       return;
-//     }
-//   //file written successfully
-//   }
-// );
-
 
 // pos0 is https
 
@@ -80,7 +62,7 @@ request(usableargs[0], (error, response, body) => {
     //file written successfully
     console.log('file write success');
     let stats = fs.statSync(usableargs[1]);
-    console.log(`Downloaded and saved ${stats.size} bytes to ${usableargs[1]}`)
+    console.log(`Downloaded and saved ${stats.size} bytes to ${usableargs[1]}`);
 
   });
 });
